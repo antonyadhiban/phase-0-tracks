@@ -4,19 +4,30 @@
 	<title>Animal Form</title>
 </head>
 <body>
+  <h1>Animal Form</h1>
 	<form action="success.html">
+	  <fieldset><legend>Introduction</legend>
 		<label>Name : <input type="text" name="firstname"></label><br>
+	  </fieldset>
+
+	  <fieldset><legend>Preference</legend>
 		<label>What's your favorite animal? 
+
 		<select name="favanimal">
 		<option value="cats">Cats</option>
 		<option value="dogs">Dogs</option>
 		<option value="elephants">Elephants</option>
-		</select></label><br>
+		</select>
+		</label><br>
 
 		<label>Why do you like that animal the best?</label><br> 
+
 		<textarea name="reasoning">
 		</textarea><br>
+	  </fieldset>
+		
 
+		<fieldset><legend>Quiz Time</legend>
 		<label> Which animal is the largest?</label><br>
 		<input type="radio" name="cats" value="cats">Cats<br>
 		<input type="radio" name="dogs" value="dogs">Dogs<br>
@@ -27,8 +38,12 @@
 	    <input type="checkbox" id="tall" value="tall"><label for="tall"> tall</label><br>  
 	    <input type="checkbox" id="vegetarian" value="vegetarian"><label for="vegetarian"> vegetarian</label><br> 
 	    <input type="checkbox" id="fast" value="fast"><label for="fast"> fast</label><br>
+	    </fieldset>
 
-	    <input type="password" name="password"><br>
+	    <fieldset><legend>Contact</legend>
+	      <label>E-mail id</label> 
+	      <input type="email" name="email"><br>
+	    </fieldset><br>
 	    <input type="submit">	
 	</form>
 
