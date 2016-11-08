@@ -4,12 +4,13 @@ img{
 	margin-left:40%;
 }
 #octopus{
-	top:12%;
-	left:3%;
+	top:90px;
+	left:28px;
 }
 #glass{
-	top:26.9%;
-	left:9.7%;
-
-	
+	top:187px;
+	left:71px;	
+}
+#hat{
+	z-index: 1;
 }
