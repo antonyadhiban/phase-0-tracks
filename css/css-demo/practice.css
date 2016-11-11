@@ -1,0 +1,14 @@
+#contact-info{font-size: .8em;}
+
+.job{background-color: #e9e5dc;
+	 border-radius:10px;
+	 margin-top: 10px;
+	 margin-bottom: 10px;
+	 padding:5px 5px 5px 10px;}
+
+.list{font-size:.8em;}
+
+.list::after{content:"best job!";
+			 font-style: italic;}
+
+.volunteer-gig > h3 {font-family: times new roman;}
