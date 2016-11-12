@@ -10,11 +10,11 @@ cite {
 }
 
 body{
-  width:960px;
+  max-width:960px;
 }
 
 section#external-links {
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
 }
@@ -22,7 +22,7 @@ section#external-links {
 main{
   display: inline-block;
   vertical-align: top;
-  width: 756px;
+  width: 70%;
 }
 
 #external-links ul {
