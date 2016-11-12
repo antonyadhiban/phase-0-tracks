@@ -9,6 +9,22 @@ cite {
   margin-top: 10px;
 }
 
+body{
+  max-width:960px;
+}
+
+section#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+main{
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
@@ -26,6 +42,23 @@ figure {
   margin-right: 0px;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+   section#external-links{
+    font-size: 12px;
+  }
+  main h1{
+    font-size: 15px; 
+  }
+  section#external-links h1{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px){
+ 
+}
 figcaption {
   font-style: italic;
   text-align: right;
