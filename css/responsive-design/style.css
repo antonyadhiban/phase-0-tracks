@@ -42,6 +42,23 @@ figure {
   margin-right: 0px;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+   section#external-links{
+    font-size: 12px;
+  }
+  main h1{
+    font-size: 15px; 
+  }
+  section#external-links h1{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px){
+ 
+}
 figcaption {
   font-style: italic;
   text-align: right;
