@@ -9,6 +9,22 @@ cite {
   margin-top: 10px;
 }
 
+body{
+  width:960px;
+}
+
+section#external-links {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+main{
+  display: inline-block;
+  vertical-align: top;
+  width: 756px;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
