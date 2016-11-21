@@ -1,0 +1,5 @@
+*enter elevator
+*decide floor number
+ 1.start from 1
+ 2.if floor number is correct press button
+ 3.else go to next number 
