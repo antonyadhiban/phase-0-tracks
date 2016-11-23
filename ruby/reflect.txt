@@ -1,0 +1,67 @@
+1. What is a variable? Why might a programmer use a variable?
+
+A variable is used to store any type of data.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+The full_name variable is first created as a variable and then the first_name variable is taken and is matched with last_name variable for data type. Then the two variables are concatenated with first_name coming first in line.
+
+3.
+
+string - store letters, words or paragraphs.
+	a="antony"
+
+integer - store whole numbers.
+	a=18
+
+float - store fractional numbers.
+	a=21.5
+
+nil - contains no value. Takes no space when printed
+	a=nil
+
+boolean - stores true or false values.
+	a=true
+
+4. What is an algorithm?
+
+	An alggorithm is used to create a blueprint of the program. By generating the algorithm for a program it is easier for us to know what should be done in each step.
+
+5. What are two common categories of algorithm in computer science?
+
+Greedy algorithm and dynamic programming algorithm.
+
+6. What is a method? Why might a programmer choose to use a method?
+
+A method is used to create a simple set of programming that achieves a certain task. A method accepts parameter, therefore can accept values when calling a method
+
+7. Define the following terms as they relate to a method. 
+
+return value - the final value that is returned when the control exits the method
+
+side effect - Any operation that makes changes to the final value 
+
+parameter - parameter is the declaration part 
+argument - is written during method call 
+implicit return - In ruby, the program automatically returns the last statement.
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+When a variable is set under the global scope it is available at any part of the program. When a variable is under method scope it can be accessed only inside the method in which it is defined.
+
+9. What is control flow? Why might a programmer choose to use flow control?
+
+Conditional statements can be used to control the flow of the program. This is used to change the direction when there is a necessity or the choice given by the user requires running a different part of the program.
+
+10. Define the following terms as they relate to flow control.
+
+loop - any statement that is used to make repetitive executions
+
+if - runs the statement if the condition is true 
+else - runs the statement if condition of 'if' is false 
+elsif - this condition is used to set further rules similar to an 'if' statements
+while - runs statement until the condition is false
+until - runs statement until the condition is true
+
+
+

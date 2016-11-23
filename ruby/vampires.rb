@@ -24,7 +24,7 @@ def process
   
   if name=="Drake Cula"||name=="Tu Fang"
   	result="Definitely a vampire."
-  elsif age<100&&order=="yes"&&enroll=="yes"
+  elsif age<=100&&order=="yes"&&enroll=="yes"
   	result="Probably not a vampire."
   elsif age>100&&order=="no"&&enroll=="yes"
   	result="Probably a vampire."
