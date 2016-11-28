@@ -1,4 +1,7 @@
-def fak_nam
+def fake_name
+  name=nil
+  hash={}
+  while name!="quit" do 
 	puts "Please enter your name?"
 	name=gets.chomp!
 	name.downcase!
@@ -17,7 +20,11 @@ def fak_nam
 	   consonants[consonants.index(x).next]
 	  end
 	}
-	puts rnm.join("").split(" ").map{|x| x.capitalize}.join(" ")
+	hash[name]=rnm.join("").split(" ").map{|x| x.capitalize}.join(" ")
+	puts hash[name]
+	end
+hash.delete("quit")
+hash.each{|x,y| puts "#{x} is also known as #{y}"}
 end
 
-fak_nam
+fake_name
