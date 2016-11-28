@@ -7,8 +7,8 @@
 "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-"zom".ljust(2,'o')
-# => “zoom”
+"zom".insert(1,'o') #found using google
+# => “zoom” 
 
 "enhance".center(20)
 # => "    enhance    "
@@ -16,7 +16,7 @@
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-#{}"the usual".
+"the usual".concat(" suspects")
 #=> "the usual suspects"
 
 " suspects".prepend("the usual ")
@@ -28,10 +28,10 @@
 "The mystery of the missing first letter".reverse.chop.reverse
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+"Elementary,    my   dear        Watson!".squeeze # found using google
 # => "Elementary, my dear Watson!"
 
-"z".to_i
+"z".ord #found using google
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
