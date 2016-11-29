@@ -29,9 +29,42 @@ class Puppy
 
 end
 
+class BasketballPlayers
+
+	def initialize
+		puts "Initialize new basketball_players instance"
+	end
+
+	def dribble(count)
+		puts "The player has dribbled #{count} times"
+	end
+
+	def shots(shot_count)
+		puts "The player made #{shot_count} shots"
+	end
+
+
+
+end
+
+=begin
 pup=Puppy.new
 pup.fetch("car")
 pup.speak(3)
 pup.roll_over
 pup.dog_years(10)
 pup.play_dead
+=end
+
+store_instance=[]
+count=50
+
+until count==0 
+	store_instance << player=BasketballPlayers.new
+	count-=1
+end
+
+store_instance.each do |x|
+	x.dribble(5)
+	x.shots(3)
+end
