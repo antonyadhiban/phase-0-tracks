@@ -4,7 +4,6 @@ class Santa
 		@gender=gender
 		@ethnicity=ethnicity
 		@age=0
-		@reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		puts "Initializing Santa instance..."
 	end
 
@@ -16,8 +15,22 @@ class Santa
 		puts "That was a good #{cookie_type}"
 	end
 
+	def reindeer(name)
+		puts "#{name} has arrived."
+	end
+
 end
 
-call_santa=Santa.new
+
+
+call_santa=Santa.new("Alien","Green")
 call_santa.speak
-call_santa.eat_milk_and_cookies
+call_santa.eat_milk_and_cookies("Slime")
+
+reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
+reindeer_ranking.each do |x| 
+  call_santa.speak 
+  call_santa.reindeer(x) 
+end
+
