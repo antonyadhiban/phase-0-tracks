@@ -13,3 +13,7 @@ class Santa
 	end
 
 end
+
+call_santa=Santa.new
+call_santa.speak
+call_santa.eat_milk_and_cookies
