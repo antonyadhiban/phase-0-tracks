@@ -1,11 +1,17 @@
 class Santa
 
+	attr_reader :age,:ethnicity
+	attr_accessor :gender  
+
 	def initialize(gender,ethnicity)
+		puts "Initializing Santa instance..."
 		@gender=gender
 		@ethnicity=ethnicity
 		@age=0
 		@reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		puts "Initializing Santa instance..."
+		@example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+		@example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
 	end
 
 	def speak
@@ -62,3 +68,7 @@ call_santa.get_age
   #call_santa.reindeer(x) 
 #end
 
+santas = []
+example_genders.length.times do |i|
+  santas << Santa.new(@example_genders[i], @example_ethnicities[i])
+end
