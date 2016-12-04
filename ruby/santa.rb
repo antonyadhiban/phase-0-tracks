@@ -1,7 +1,7 @@
 class Santa
 
-	attr_reader :age,:ethnicity
-	attr_accessor :gender  
+	attr_reader :age,:ethnicity,:example_genders,:example_ethnicities
+	attr_accessor :gender,:reindeer_ranking
 
 	def initialize(gender,ethnicity)
 		puts "Initializing Santa instance..."
@@ -36,20 +36,17 @@ class Santa
 	  @reindeer_ranking.push(name_of_reindeer)
 	end
 	
-	#setter method 
-	def set_gender=(new_gender)
-	  @gender=new_gender
+	def set_gender(gender)
+	  @gender=gender
 	end
 	
-	#getter method
-	def get_age
-	  @age
+	def new_santa
+	  santa_age=rand(140)
+	  santa_ethnicity=@example_ethnicities[rand(@example_ethnicities.length)]
+	  santa_gender=@example_genders[rand(@example_genders.length)]
+	  puts "Age : #{santa_age}\nGender : #{santa_gender}\nEthnicity : #{santa_ethnicity}"
 	end
-	
-	def get_ethnicity
-	  @ethnicity
-	end
-	
+
 end
 
 
@@ -59,16 +56,9 @@ call_santa.speak
 call_santa.eat_milk_and_cookies("Slime")
 call_santa.celebrate_birthday
 call_santa.get_mad_at("Vixen")
-call_santa.set_gender = "Not Alien"
-call_santa.get_ethnicity
-call_santa.get_age
-
+call_santa.set_gender("Not Alien")
+200.times do call_santa.new_santa end
 #reindeer_ranking.each do |x| 
  # call_santa.speak 
   #call_santa.reindeer(x) 
 #end
-
-santas = []
-example_genders.length.times do |i|
-  santas << Santa.new(@example_genders[i], @example_ethnicities[i])
-end
