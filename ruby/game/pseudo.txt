@@ -1,0 +1,28 @@
+#Create new class
+	#define new method and get parameter
+
+		input:string containing a word
+
+		1.take parameter and split into array and set as answer array
+		2.create blanks array with length equal to answer array
+		3.set number of guesses based on the length of word
+
+		output:print blank array and number of guesses
+
+	#define new method and get parameter
+
+		input:character containing single letter
+
+		1.loop through the answer array to check if the input letter is present.
+		2.if element is present break loop 
+
+		output:blank array with found letters
+
+#driver code
+
+#create the game structure
+
+1.ask Player 1 to enter a word
+2.call first method with input word as argument
+3.call second method repeatedly until number of guesses or until hidden array matches input word
+	3a.if hidden array and input word matches then print win message else print lose message
