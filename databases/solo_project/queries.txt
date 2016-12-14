@@ -24,3 +24,30 @@ Tiger|Carnivore
 Human|Omnivore
 sqlite> .exit
 
+databases :> sqlite3 animals.db
+SQLite version 3.11.0 2016-02-15 17:29:24
+Enter ".help" for usage hints.
+sqlite> .table
+animal      food_habit
+sqlite> SELECT * FROM animal,food_habit WHERE animal.type_id=id;
+Error: ambiguous column name: id
+sqlite> SELECT * FROM animal,food_habit WHERE animal.type_id=food_habit.id;
+1|Elephant|2|2|Herbivore
+2|Tiger|1|1|Carnivore
+3|Human|3|3|Omnivore
+4|Squirrels|3|3|Omnivore
+sqlite> SELECT animal.name food_habit.type FROM animal JOIN food_habit ON animal.type_id=food_habit.id;
+Error: near ".": syntax error
+sqlite> SELECT animal.name,food_habit.type FROM animal JOIN food_habit ON animal.type_id=food_habit.id;
+Elephant|Herbivore
+Tiger|Carnivore
+Human|Omnivore
+Squirrels|Omnivore
+sqlite> DELETE FROM animal WHERE name="Squirrels";
+sqlite> SELECT animal.name,food_habit.type FROM animal JOIN food_habit ON animal.type_id=food_habit.id;
+Elephant|Herbivore
+Tiger|Carnivore
+Human|Omnivore
+sqlite> .exit
+
+
