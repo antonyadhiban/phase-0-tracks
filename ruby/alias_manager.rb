@@ -1,30 +1,48 @@
-def fake_name
-  name=nil
-  hash={}
-  while name!="quit" do 
-	puts "Please enter your name?"
-	name=gets.chomp!
-	name.downcase!
-	vowels="aeioua"
-	arr_vow=vowels.split("")
-	consonants="bcdfghjklmnpqrstvwxyzb"
-	arr_con=consonants.split("")
+def create_fake_name
+  
+  spy_name = nil
+  hash = {}
+  
+  while spy_name != "quit" do 
 
-	arr=name.split('')
-	rnm=arr.map{|x|
-	  if x==" "
+	puts "Please enter your name?"
+	spy_name = gets.chomp!
+	next if spy_name == "quit"
+	spy_name.downcase!
+	vowels = "aeioua"
+	consonants = "bcdfghjklmnpqrstvwxyzb"
+
+
+	spy_name_letters = spy_name.split('')
+	fake_name_letters = spy_name_letters.map do |each_letter|
+	# check for spaces but do not replace them
+	  if each_letter == " "
 	    " "
-	  elsif vowels.include?(x)
-	    vowels[vowels.index(x).next]
+	# if the letter is a vowel replace with next vowel
+	  elsif vowels.include?(each_letter)
+	    vowels[vowels.index(each_letter).next]
+	# else replace next constant
 	  else
-	   consonants[consonants.index(x).next]
+	   consonants[consonants.index(each_letter).next]
 	  end
-	}
-	hash[name]=rnm.join("").split(" ").map{|x| x.capitalize}.join(" ")
-	puts hash[name]
 	end
-hash.delete("quit")
-hash.each{|x,y| puts "#{x} is also known as #{y}"}
+
+	# join the letter to form a word and store 
+	hash[spy_name] = fake_name_letters.join("")
+	# split words using space
+	hash[spy_name] = hash[spy_name].split(" ")
+	# capitalize each word
+	hash[spy_name].map! do |each_word| each_word.capitalize end
+	# join words using space
+	hash[spy_name] = hash[spy_name].join(" ")
+	# print hash
+	puts hash[spy_name]
+	end
+
+# print each original name and its fake equivalent
+hash.each do |each_key,each_value| puts "#{each_key} is also known as #{each_value}" end
+
 end
 
-fake_name
+create_fake_name
+
