@@ -11,3 +11,4 @@ nested_datastructure = {
 p nested_datastructure[:ars]
 p nested_datastructure[:mun][3]
 p nested_datastructure[:liv][:before]
+
