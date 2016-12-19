@@ -45,3 +45,4 @@ hash.each do |each_key,each_value| puts "#{each_key} is also known as #{each_val
 end
 
 create_fake_name
+

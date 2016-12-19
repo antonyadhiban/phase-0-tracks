@@ -32,10 +32,11 @@ p "zom".gsub("o","oo")
 "Elementary,    my   dear        Watson!".ljust(0)
 # => "Elementary, my dear Watson!"
 
-"z".each_byte {|each_letter| p each_letter}
+"z".ord #found using google
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 #Its the ascii value of the letter
+
 
 "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
