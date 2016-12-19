@@ -24,4 +24,34 @@ resulting_array=hash.map do |each_key,each_value| "#{each_key} acted in #{each_v
 # print the resulting array after changing values
 p resulting_array
 
+# remove all elements less than 5
+reject_array=array.reject do |each_element| each_element<5 end
+
+# remove all keys that have length greater than 15
+reject_hash=hash.reject do |each_key,each_value| each_key.length>15 end
+
+# a different method that filters all elements less than 5 using an alternate method 
+select_array=array.select do |each_element| each_element<5 end
+
+# a different method that filters a data structure where length of key greater than 15
+select_hash=hash.select do |each_key,each_value| each_key.length>15 end
+
+# delete elements if element greater than 5 
+delete_if_array=array.delete_if do |each_element| each_element>5 end
+
+# a method that will remove items from a array until length of array is less than 3 evaluates to false, then stops
+until array.length<3 do 
+  array.pop
+end
+# print array
+p array
+
+# a method that will remove items from a hash until length of array is less than 2 evaluates to false, then stops
+until hash.length<2 do
+  hash.shift
+end
+#print hash
+p hash
+
  
+
