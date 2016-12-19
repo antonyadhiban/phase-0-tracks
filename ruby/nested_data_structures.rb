@@ -1,8 +1,14 @@
-nst_arr={
-	ars:"arsene wenger",
-	mun:["Alex ferguson","david moyes","van gal","Jose mourinho"],
-	liv:{now:"jurgen klopp",before:"long list of managers"}
-	}
-p nst_arr[:ars]
-p nst_arr[:mun][3]
-p nst_arr[:liv][:before]
+# Nested datastructure
+nested_datastructure = {
+    # value as a string
+    ars:"Arsene Wenger",
+    # value as an array
+    mun:["Alex Ferguson","David Moyes","Van Gal","Jose Mourinho"],
+    # value as a hash
+    liv:{now:"Jurgen Klopp",before:"long list of managers"}
+    }
+# Nested access
+p nested_datastructure[:ars]
+p nested_datastructure[:mun][3]
+p nested_datastructure[:liv][:before]
+
