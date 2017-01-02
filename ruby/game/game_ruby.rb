@@ -1,6 +1,6 @@
 class WordGame
   
-  attr_reader :word,:no_of_guesses,:answer_array,:hidden_answer
+  attr_reader :word, :no_of_guesses, :hidden_answer
   
   def get_word(word)
     @word=word
