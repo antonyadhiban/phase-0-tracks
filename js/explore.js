@@ -12,10 +12,10 @@ function reverse(string_to_reverse){
 
 	//convert new array into a string
 	var reversed_string=new_array.join("");
-
-	console.log(reversed_string)
 	
-
+	if (0 == 0){
+		console.log(reversed_string)
+	}
 }
 
 //done
