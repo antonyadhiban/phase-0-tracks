@@ -13,11 +13,8 @@ function reverse(string_to_reverse){
 	//convert new array into a string
 	var reversed_string=new_array.join("");
 
-	if (string_to_reverse==reversed_string){
-		console.log(reversed_string)
-	}
-	else 
-		console.log("Not a palindrome");
+	console.log(reversed_string)
+	
 
 }
 
@@ -26,4 +23,3 @@ function reverse(string_to_reverse){
 //Add driver code to check
 
 reverse("antonyadhiban");
-reverse("malayalam");
