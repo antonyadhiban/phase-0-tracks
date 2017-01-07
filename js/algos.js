@@ -25,7 +25,7 @@ function key_value_match(object1,object2){
 	  i+=1;
   }
 
-  return result;
+  console.log (result);
 }
 
 function generate_random_words(number_of_words){
