@@ -16,7 +16,7 @@ class VirusPredictor
     @population = population
     @population_density = population_density
   end
-  
+
   
   # Calls the methods - predicted_deaths and speed_of_spread
   def virus_effects
@@ -29,41 +29,35 @@ class VirusPredictor
   def predicted_deaths#(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
+      print "#{@state} will lose #{(@population * 0.4).floor} people in this outbreak"
     elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
+      print "#{@state} will lose #{(@population * 0.3).floor} people in this outbreak"
     elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
+     print "#{@state} will lose #{(@population * 0.2).floor} people in this outbreak"
     elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
+      print "#{@state} will lose #{(@population * 0.1).floor} people in this outbreak"
     else
-      number_of_deaths = (@population * 0.05).floor
+      print "#{@state} will lose #{(@population * 0.05).floor} people in this outbreak"
     end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
   end
 
   # predits speed of spread based on specific population.
   def speed_of_spread#(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
+    #speed = 0.0
 
     if @population_density >= 200
-      speed += 0.5
+      puts " and will spread across the state in 0.5 months.\n\n"
     elsif @population_density >= 150
-      speed += 1
+      puts " and will spread across the state in 1.0 months.\n\n"
     elsif @population_density >= 100
-      speed += 1.5
+      puts " and will spread across the state in 1.5 months.\n\n"
     elsif @population_density >= 50
-      speed += 2
+      puts " and will spread across the state in 2.0 months.\n\n"
     else
-      speed += 2.5
+      puts " and will spread across the state in 2.5 months.\n\n"
     end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-
   end
 
 end
@@ -86,6 +80,20 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
-#STATE_DATA.each do |state, population_data| 
+STATE_DATA.each do |state, population_data| 
+  each_state = VirusPredictor.new(state, population_data[:population_density], population_data[:population])
+  each_state.virus_effects 
+end
+
 #=======================================================================
 # Reflection Section
+
+# The colon can only be used when the keys are symbols. The fat rockets can be used in any case.
+
+# The require keyword searches only in the current directory of the code file but require_relative searches down the level of folders from the current folder 
+
+# .each, .each_key, .each.value, .select, .map
+
+# The instance variables can only be accessed inside the class and the parameters are not required since the variables are accessible inside the class.
+
+# The scope of variables and methods.
