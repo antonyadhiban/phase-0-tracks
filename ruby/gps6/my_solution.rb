@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Ted Ngyuen].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require_relative searches through the library of the existing file.
