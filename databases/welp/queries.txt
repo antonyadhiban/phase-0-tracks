@@ -1,0 +1,23 @@
+sqlite> SELECT * FROM businesses, reviews WHERE reviews.businesses_id = businesses.id;
+1|Grundy Hollow Wedding Chapel|1|5|Great food!|1|1
+2|Amir's Towing|2|2|Bad service|2|4
+3|The Beagle Nightclub|3|4|Very clean|3|2
+4|Lotus Yoga|4|2|Filthy|4|3
+sqlite> SELECT users.* FROM users
+   ...> JOIN reviews ON reviews.users_id = users.id;
+1|Bradford|Pitt
+4|Steven|Wonder
+2|Mandy|Kaling
+3|Angela|Jolie
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses, reviews WHERE reviews.businesses_id = businesses.id AND reviews.users_id = users.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Great food!
+Steven|Wonder|Amir's Towing|2|Bad service
+Mandy|Kaling|The Beagle Nightclub|4|Very clean
+Angela|Jolie|Lotus Yoga|2|Filthy
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses, reviews WHERE reviews.businesses_id = businesses.id AND reviews.users_id = users.id AND businesses.name = "Lotus Yoga";
+Angela|Jolie|Lotus Yoga|2|Filthy
+sqlite> SELECT * FROM reviews, businesses, users WHERE reviews.businesses_id = businesses.id AND reviews.users_id = users.id;
+1|5|Great food!|1|1|1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt
+2|2|Bad service|2|4|2|Amir's Towing|4|Steven|Wonder
+3|4|Very clean|3|2|3|The Beagle Nightclub|2|Mandy|Kaling
+4|2|Filthy|4|3|4|Lotus Yoga|3|Angela|Jolie
